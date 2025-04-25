@@ -1,0 +1,37 @@
+*
+{
+    line-height: 1.5;
+}
+
+p
+{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+h1
+{
+    font-size: 32px;
+}
+h3
+{
+    font-size: 20px;
+   color: #006EB6; 
+}
+h1, h3
+{
+    letter-spacing: 5px;
+    text-align: center;
+}
+div 
+{
+    padding: 125px;
+    max-width: 600px;
+}
+.image-container
+{
+    text-align: center;
+}
+.logo
+{
+    width: 150px;
+}
