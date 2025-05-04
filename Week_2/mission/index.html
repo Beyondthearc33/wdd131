@@ -7,11 +7,16 @@
     <link rel="stylesheet" href="styles.css">
     <meta name="description" content="Mission Statement page for Brigham Young University Idaho">
     <meta name="author" content="Luke Lucas">
+    <script src="mission.js" defer></script>
     <title>BYUI Mission Statement</title>
 </head>
 <body>
     <div class="content">
         <header class="title">
+            <select name="mode" id="mode">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
             <h1>MISSION STATEMENT</h1>
             <h3>BRIGHAM YOUNG UNIVERSITY-IDAHO</h3>
         </header>
@@ -44,7 +49,8 @@
         </main>
         <footer>
             <div class="image-container">
-                <img src="images/byui-logo_blue.webp" alt="BYUI Logo in blue" class="logo">
+                <img src="images/byui-logo_blue.webp" alt="BYUI Logo in blue" class="logo" id="lightImage">
+                <img src="images/byui-logo_white.png" alt="BYUI Logo in white" class="logo hideImage"  id="darkImage">
             </div>
         </footer>
     </div>
