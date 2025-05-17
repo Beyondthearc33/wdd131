@@ -14,7 +14,7 @@ function handleResize() {
         menu.classList.add("hide");
     }
 }
-
+handleResize();
 window.addEventListener("resize", handleResize);
 
 
