@@ -28,8 +28,10 @@ images.forEach(image => {
 function showDialog(event) {
     const image = event.currentTarget;
     const imgSrc = image.getAttribute("src");
+    const splitImg = imgSrc.split("-");
+    const fullImg  = splitImg[0] + "-full.jpeg";
     const dialogImg = document.querySelector("#dialog-img");
-    dialogImg.setAttribute("src", imgSrc);
+    dialogImg.setAttribute("src", fullImg);
     dialog.showModal();   
 }
 
@@ -39,3 +41,8 @@ function closeDialog() {
     dialog.close();
 }
 
+dialog.addEventListener('click', (event) => {
+  if (event.target === dialog) {
+    dialog.close();
+  }
+})

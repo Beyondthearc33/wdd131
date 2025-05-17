@@ -12,21 +12,46 @@
 
 * {
     font-family: var(--secondary-font);
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-img {
+figure img {
     max-width: 100%;
     object-fit: cover;
     border: 4px solid white;
     box-shadow: 0 5px 12px;
 }
+
 dialog {
+    position: fixed;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, .6);
+}
+
+.dialog-container {
+    position: absolute;
+    width: max-content;
+    margin: 0 auto;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+dialog > .dialog-container > img {
+    width: 70vw;
+    max-width: 100%;
+}
+
+dialog > .dialog-container > button {
+    position: absolute;
+    top: -15px;
+    right: -35px;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
 }
 
 header {
@@ -123,6 +148,10 @@ main {
         gap: 20px;
         padding-bottom: 20px;
     }
+
+    dialog > .dialog-container > img {
+        width: 500px;
+    }
 }
 
 @media screen and (min-width: 1000px) {
@@ -130,5 +159,9 @@ main {
         grid-template-columns: 1fr 1fr 1fr;
         max-width: 1200px;
         margin: 0 auto;
+    }
+
+    dialog > .dialog-container > img {
+        width: 650px;
     }
 }
