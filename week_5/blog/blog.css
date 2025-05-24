@@ -28,7 +28,7 @@ h1 {
 
 .main-nav {
     display: grid;
-    grid-template-columns: 80px 100px 90px;
+    grid-template-columns: 100px 100px 100px;
     justify-content: end;
     border-top: 1px solid var(--color-gold);
     border-bottom: 1px solid var(--color-gold);
@@ -47,7 +47,7 @@ h1 {
 
 .grid-article {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
 }
 
 .article-left {
