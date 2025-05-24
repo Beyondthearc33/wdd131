@@ -1,17 +1,18 @@
 :root {
- 
-  --color-gold: #EFC69B;
-  --font-color-red: #AF1B3F;
-  --font-color-dark: #473144;
 
-  /* Font Families */
-  --font-body: 'Helvetica', 'Arial', sans-serif;
-  --font-headline: 'Lora', 'Impact', serif;
+    --color-gold: #EFC69B;
+    --font-color-red: #AF1B3F;
+    --font-color-dark: #473144;
+
+    /* Font Families */
+    --font-body: 'Helvetica', 'Arial', sans-serif;
+    --font-headline: 'Lora', 'Impact', serif;
 }
 
 body {
-  font-family: var(--font-body);
-  color: var(--font-color-dark); /* Default text color */
+    font-family: var(--font-body);
+    color: var(--font-color-dark);
+    /* Default text color */
 }
 
 h1 {
@@ -21,9 +22,9 @@ h1 {
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
 }
 
 .main-nav {
@@ -65,7 +66,8 @@ h1 {
     text-align: right;
     margin-top: 5px;
 }
-.article-right h1{
+
+.article-right h1 {
     color: var(--font-color-red);
     text-align: left;
     padding-left: 10px;
