@@ -1,4 +1,3 @@
-
 function participantTemplate(count) {
     return `
     <section class="participant${count}">
@@ -41,7 +40,7 @@ function participantTemplate(count) {
     `;
 }
 
-let participantCount = 0;
+let participantCount = 1;
 const addBtn = document.getElementById('add');
 
 addBtn.addEventListener('click', () => {
@@ -49,25 +48,26 @@ addBtn.addEventListener('click', () => {
     addBtn.insertAdjacentHTML('beforebegin', participantTemplate(participantCount));
 });
 
-const form = document.getElementById('submitButton');
+const form = document.getElementById('register-form');
 
 form.addEventListener('submit', submitForm);
 
 function submitForm(event) {
     event.preventDefault();
+    event.stopPropagation();
     let adultName = document.getElementById('adult_name').value;
     let feeTotal = totalFees();
-    //Form Object
     let info = {
         adultName: adultName,
         participantCount: participantCount,
         feeTotal: feeTotal
     };
-
+    form.style.display = 'none';
+    document.querySelector('.testbox').innerHTML = successTemplate(info);
 }
 
 function successTemplate(info) {
-       return `
+    return `
         <h2>Registration Successful!</h2>
         <p>Thank you, ${info.adultName}.</p>
         <p>Number of participants: ${info.participantCount}</p>
@@ -79,10 +79,8 @@ function totalFees() {
     let feeElements = document.querySelectorAll("[id^=fee]");
     feeElements = [...feeElements];
 
-    // Use reduce to sum up all the fee values
     let total = feeElements.reduce((sum, input) => {
         let value = parseFloat(input.value);
-        // If value is not a number (NaN), use 0
         if (isNaN(value)) value = 0;
         return sum + value;
     }, 0);
