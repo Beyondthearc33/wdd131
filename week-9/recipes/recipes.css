@@ -1,0 +1,27 @@
+.icon-star {
+  color: gold;
+}
+
+.icon-star-empty {
+  color: lightgray;
+}
+
+
+@media (max-width: 768px) {
+  /* Styles for mobile devices go here */
+  body {
+    font-size: 16px;
+    padding: 1rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-title h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Stack items, reduce spacing, etc. */
+}
