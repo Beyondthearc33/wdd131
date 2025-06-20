@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Recipe Book</title>
@@ -8,40 +9,63 @@
   <meta name="author" content="Luke Lucas" />
   <link rel="icon" href="favicon.png" type="image/x-icon" />
   <link rel="stylesheet" href="recipes.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
   <meta property="og:title" content="Recipes Website" />
   <script src="main.js" defer></script>
 </head>
+
 <body>
-  <header>
-    <div>
+  <div class="page">
+
+    <header>
+      <div class="logo-title">
         <img src="images/recipe-book.png" alt="Recipe Book Logo">
-        <h1>Recipe Book</h1>
-    </div>
+        <h1>RECIPE BOOK</h1>
+      </div>
+      <div class="search-container">
+        <!-- <label for="site-search" class="search-label">Find a Recipe!</label> -->
+        <div class="search-bar">
+          <input type="search" placeholder="Find a recipe" class="search-input" />
+          <button type="submit" class="search-button" aria-label="Search">
+            <img src="images/search.svg" alt="">
+          </button>
+        </div>
+      </div>
+      
+    </header>
     
-  </header>
-
-  <main>
-   <span
-	class="rating"
-	role="img"
-	aria-label="Rating: 4 out of 5 stars"
->
-	<span aria-hidden="true" class="icon-star">⭐</span>
-	<span aria-hidden="true" class="icon-star">⭐</span>
-	<span aria-hidden="true" class="icon-star">⭐</span>
-	<span aria-hidden="true" class="icon-star-empty">⭐</span>
-	<span aria-hidden="true" class="icon-star-empty">☆</span>
-</span>
-  </main>
-
-  <footer>
-    <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
-    <div class="social">
-	<!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
-	<a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
-	<a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
-	<a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+    <main>
+      <div class="parent">
+        <div class="recipe-img">
+          <img src="images/apple-crisp.jpg" alt="Apple crisp on a plate">
+        </div>
+        <div class="recipe-content">
+          <h1 class="tag">dessert</h1>
+          <h2 class="recipe-name">APPLE CRISP</h2>
+          <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+            <span aria-hidden="true" class="icon-star">⭐</span>
+            <span aria-hidden="true" class="icon-star">⭐</span>
+            <span aria-hidden="true" class="icon-star">⭐</span>
+            <span aria-hidden="true" class="icon-star-empty">⭐</span>
+            <span aria-hidden="true" class="icon-star-empty">☆</span>
+          </span>
+          <p>This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      
+      <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik -
+        Flaticon</a>
+        <div class="social">
+          <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+          <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+          <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+          <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+        </div>
+      </footer>
     </div>
-  </footer>
 </body>
+
 </html>

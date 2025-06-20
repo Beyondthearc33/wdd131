@@ -1,27 +1,158 @@
-.icon-star {
-  color: gold;
+ @import url("https://fonts.googleapis.com/css2?family=family=Amatic+SC&display=swap");
+
+ :root {
+   --primary-color: #1B98E0;
+   --secondary-color: #59c3c3;
+   --text-dark: #333;
+   --text-light: #ebebeb;
+   --primary-font: Arial, Helvetica, sans-serif;
+   --secondary-font: "Amatic SC";
+ }
+
+ * {
+   font-family: var(--primary-font);
+ }
+
+ h1,
+ h2,
+ h3 {
+   font-family: 'Caveat', cursive;
+ }
+
+ h1 {
+   font-size: 3rem;
+   /* 48px if 1rem = 16px */
+   line-height: 1.2;
+   margin-bottom: 0.5em;
+   font-weight: bold;
+ }
+
+ h2 {
+   color: var(--secondary-color);
+ }
+
+ img {
+   max-width: 100%;
+ }
+
+ header {
+   padding: 20px;
+   border-bottom: 1px solid #999;
+ }
+
+ footer {
+   display: flex;
+   justify-content: space-between;
+ }
+
+ footer a {
+   font-size: 0.6em;
+ }
+
+.page {
+  padding: 1em;
 }
 
-.icon-star-empty {
-  color: lightgray;
-}
+ .logo-title {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
 
+ .logo-title img {
+   width: 70px;
+   height: auto;
+ }
 
-@media (max-width: 768px) {
-  /* Styles for mobile devices go here */
-  body {
-    font-size: 16px;
-    padding: 1rem;
-  }
+ .search-bar {
+   display: flex;
+   width: 100%;
+   /* max-width: 600px; */
+   border: 1px solid #333;
+   border-radius: 6px;
+   overflow: hidden;
+ }
 
-  .nav {
+ .search-input {
+   flex: 1;
+   padding: 0.75em;
+   border: none;
+   outline: none;
+   font-size: 1em;
+ }
+
+ .search-button {
+   background: #f9f9f9;
+   border: none;
+   border-left: 1px solid #333;
+   padding: 0 1em;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .search-button img {
+   width: 1em;
+   height: 1em;
+   opacity: 0.7;
+ }
+
+ input::placeholder {
+   color: #999;
+ }
+
+ .search-button:hover img {
+   opacity: 1;
+ }
+
+ .parent {
+   border: 1px solid #333;
+   border-radius: 6px;
+   margin: 15px;
+   padding: 15px;
+ }
+
+ .recipe-img {
+   padding: 10px;
+ }
+
+ .recipe-content {
+   padding: 10px;
+ }
+
+ .tag {
+  border: 1px solid #333;
+ }
+
+ .icon-star {
+   color: gold;
+ }
+
+ .icon-star-empty {
+   color: lightgray;
+ }
+
+ .parent {
+   display: flex;
+   justify-content: space-around;
+ }
+
+ .social img {
+   width: 1.2em;
+   height: auto;
+
+ }
+
+ @media (max-width: 600px) {
+  .parent {
     flex-direction: column;
-    align-items: center;
   }
+ }
 
-  .logo-title h1 {
-    font-size: 1.5rem;
+ @media (min-width: 960px) {
+  .page {
+    max-width: 960px;
+    margin: 0 auto ;
   }
-
-  /* Stack items, reduce spacing, etc. */
-}
+ }
