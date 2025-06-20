@@ -7,6 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="A searchable recipe book website." />
   <meta name="author" content="Luke Lucas" />
+  <meta property="og:title" content="Recipe Book Home">
+  <meta property="og:type" content="Recipe Book" />
+  <meta property="og:description" content="Site of amazing recipes to cook!">
+  <meta property="og:image" content="URL to an image">
+  <meta property="og:url" content="URL of the page">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.png" type="image/x-icon" />
   <link rel="stylesheet" href="recipes.css" />
   <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
@@ -31,16 +37,16 @@
           </button>
         </div>
       </div>
-      
+
     </header>
-    
+
     <main>
       <div class="parent">
-        <div class="recipe-img">
+        <div class="recipe-img-container">
           <img src="images/apple-crisp.jpg" alt="Apple crisp on a plate">
         </div>
         <div class="recipe-content">
-          <h1 class="tag">dessert</h1>
+          <div class="tag">dessert</div>
           <h2 class="recipe-name">APPLE CRISP</h2>
           <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
             <span aria-hidden="true" class="icon-star">⭐</span>
@@ -49,23 +55,25 @@
             <span aria-hidden="true" class="icon-star-empty">⭐</span>
             <span aria-hidden="true" class="icon-star-empty">☆</span>
           </span>
-          <p>This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
+          <p class="recipe-description">This apple crisp recipe is a simple yet delicious fall dessert that's great
+            served warm with vanilla ice cream.</p>
         </div>
       </div>
     </main>
-    
+
     <footer>
-      
-      <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik -
+
+      <a class="footer-link" href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created
+        by Freepik -
         Flaticon</a>
-        <div class="social">
-          <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
-          <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
-          <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
-          <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
-        </div>
-      </footer>
-    </div>
+      <div class="social">
+        <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+        <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+        <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+        <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+      </div>
+    </footer>
+  </div>
 </body>
 
 </html>
