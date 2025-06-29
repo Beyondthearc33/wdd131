@@ -16,7 +16,7 @@ function getRandomListEntry(list) {
 console.log(getRandomListEntry(recipes));
 
 function recipeTemplate(recipe) {
-	return `<div class="parent">
+	return `<div class="recipe-container">
         <div class="recipe-img-container">
           <img src='${recipe.image}' alt="Apple crisp on a plate">
         </div>
@@ -67,7 +67,7 @@ function ratingTemplate(rating) {
 // const recipe = getRandomListEntry(recipes);
 // console.log(recipeTemplate(recipe));
 
-function renderRecipes(recipe) {
+function renderRecipe(recipe) {
 	// get the element we will output the recipes into
    const parent =  document.querySelector(".parent")
 	// use the recipeTemplate function to transform our recipe objects into recipe HTML strings
@@ -75,12 +75,21 @@ function renderRecipes(recipe) {
 	// Set the HTML strings as the innerHTML of our output element.
 
 }
+function renderAllRecipes(recipes) {
+       const parent =  document.querySelector(".parent")
+    
+       let recipesHTML =  "";
+       recipes.forEach((recipe)=> {
+        recipesHTML += recipeTemplate(recipe);
+       })
+       parent.innerHTML = recipesHTML;
+}
 
 function init() {
   // get a random recipe
   const recipe = getRandomListEntry(recipes)
   // render the recipe with renderRecipes.
-  renderRecipes(recipe);
+  renderRecipe(recipe);
 }
 init();
 
@@ -93,7 +102,7 @@ function searchHandler() {
     const query = inputSearch.value.trim().toLowerCase();
     const results = filterRecipes(query);
     console.log(results);
-    return query;
+   renderAllRecipes(results); 
 }
 
 function filterFunction(recipe) {
@@ -102,6 +111,16 @@ function filterFunction(recipe) {
 
 function filterRecipes(query) {
   return recipes
-    .filter(recipe => recipe.name.toLowerCase().includes(query))
+    .filter(recipe => {
+        if (recipe.name.toLowerCase().includes(query) || recipe.description.toLowerCase().includes(query)) {
+            return true;
+        } else if (recipe.tags.find((tag) => tag.toLowerCase().includes(query))) {
+            return true;
+        } else if (recipe.recipeIngredient.find((ingredient) => ingredient.toLowerCase().includes(query))) {
+            return true;
+        } else {
+            return false;
+        }
+})
     .sort((a, b) => a.name.localeCompare(b.name));
 }

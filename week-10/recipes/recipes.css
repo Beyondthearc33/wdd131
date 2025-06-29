@@ -111,11 +111,13 @@ input::placeholder {
     opacity: 1;
 }
 
-.parent {
+.recipe-container {
     border: 1px solid #333;
     border-radius: 6px;
     margin: 15px;
     padding: 15px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .recipe-img-container img {
@@ -143,18 +145,13 @@ input::placeholder {
     color: lightgray;
 }
 
-.parent {
-    display: flex;
-    justify-content: space-around;
-}
-
 .social img {
     width: 4.2em;
     height: auto;
 }
 
 @media (max-width: 600px) {
-    .parent {
+    .recipe-container {
         flex-direction: column;
     }
     .recipe-content {
