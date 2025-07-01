@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Site Plan</title>
-	<link type="text/css" rel="stylesheet" href="site-plan.css" />
+	<link type="text/css" rel="stylesheet" href="styles/site-plan.css" />
 </head>
 
 <body>
@@ -23,14 +23,21 @@
 		<!-- change this -->
 
 		<h3>Audience</h3>
-		<p>Fans of the sport of basketball</p>
+		<p>Fans of the sport of basketball, Sports reporters, sport analysts.</p>
 		<!-- change this -->
 
 		<h3>Dynamic elements</h3>
-		<p>EventListener on both bottons(View stats, Featured Player)- takes the id and redirects the user the player stats page. 
-			Dynamically create the dropdown list based on the data.
-		Random Feature Player Picker.
-		</p>
+		<p>
+  Event listeners on the "View Stats" and "Featured Player" buttons capture the player’s unique ID when clicked. This triggers a redirect to the player stats page, where their full profile is dynamically loaded based on that ID.
+</p>
+
+<p>
+  The team filter dropdown is generated directly from the player data. Instead of hardcoding the values, the script extracts unique team names from the dataset, making sure the dropdown stays up to date automatically.
+</p>
+
+<p>
+  The homepage features a randomly selected player with a featured reason. I’m considering enhancing this with conditional logic—for example, selecting only players who average more than 20 points per game to highlight standout performances.
+</p>
 		<!-- change this -->
 
 		<hr />
@@ -122,7 +129,8 @@
 		<h3>Home page</h3>
 		<p>Featured Player, with image of player and why short description on why featured.</p>
 		<h3>Player Stats</h3>
-		<p>Depending on player chosen, Player Stats page loads with selected player from home screen wiht their college, stats, bio and image.</p>
+		<p>Depending on player chosen, Player Stats page loads with selected player from home screen wiht their college,
+			stats, bio and image.</p>
 		<h2>Wireframes</h2>
 		<p>
 			Create two wireframes for your site. One for each page and list them
