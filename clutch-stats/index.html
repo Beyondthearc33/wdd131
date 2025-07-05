@@ -5,16 +5,16 @@
   <meta charset="UTF-8" />
   <title>Recipe Book</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="nba stats for nba players" />
+  <meta name="description" content="Basketball Player Stats" />
   <meta name="author" content="Luke Lucas" />
-  <meta property="og:title" content="Nba Player Stats">
+  <meta property="og:title" content="Clutch Stats">
   <meta property="og:type" content="Sport stats" />
-  <meta property="og:description" content="nba stats for nba players">
+  <meta property="og:description" content="stats for professional basketball players">
   <meta property="og:image" content="URL to an image">
   <meta property="og:url" content="URL of the page">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="" type="image/x-icon" />
-  <link rel="stylesheet" href="" />
+  <link rel="stylesheet" href="style.css" />
   <!-- <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet"> -->
   <meta property="og:title" content="NBA Player Stats" />
   <script src="main.js" defer type="module"></script>
@@ -22,18 +22,61 @@
 
 <body>
   <div class="page">
-      <header>
-        <h1 class="title">NBA Player Stats Dashboard</h1>
-        <h3 class="sub-title">Welcome to the NBA Player Stats Dashboard</h3>
+    <header>
+      <div class="logo-nav-block">
+        <img src="logo.png" class="logo" alt="stat figure with basketball and graph">
+        <nav>
+          <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Why Stats</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
 
+        </nav>
+      </div>
+      <h1 class="title">ClutchStats</h1>
+      <h3 class="sub-title">Welcome to ClutchStats Dashboard</h3>
     </header>
 
     <main>
-      
+      <h4>Welcome to ClutchStats Dashboard</h4>
+      <div class="player-dropdown">
+        <select id="player-select">
+          <option value="">Select a Player</option>
+          <option value="lebron">LeBron James</option>
+          <option value="curry">Stephen Curry</option>
+          <option value="giannis">Giannis Antetokounmpo</option>
+        </select>
+        <button class="view-button">View Stats</button>
+      </div>
+      <div class="featured-player-container">
+        <div class="featured-info">
+          <h1>Featured Player</h1>
+          <h4>Russell Westbrook</h4>
+          <p>Known for his relentless energy, triple-double dominance, and fearless playmaking, Russell Westbrook has
+            redefined the point guard role. His MVP season and historic averages make him a standout in any era of the
+            game.</p>
+        </div>
+        <div class="featured-image">
+          <img src="images/darius-knox.jpeg" alt="">
+        </div>
+      </div>
     </main>
 
-    <footer>
-
+    <footer class="footer">
+      <div>
+        <a href="https://facebook.com/YourPage" target="_blank">
+          <img src="images/facebook.png" alt="Facebook" class="social-icon" />
+        </a>
+        <a href="https://twitter.com/YourPage" target="_blank">
+          <img src="images/twitter.png" alt="Twitter" class="social-icon" />
+        </a>
+        <a href="https://instagram.com/YourPage" target="_blank">
+          <img src="images/instagram.png" alt="Instagram" class="social-icon" />
+        </a>
+      </div>
+      <a href="https://www.flaticon.com/free-icons/tweet" class="social-attribution" title="tweet icons">Icons created by Freepik - Flaticon</a>
     </footer>
   </div>
 </body>
