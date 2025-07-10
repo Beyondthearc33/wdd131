@@ -42,13 +42,18 @@
     <main>
       <h4>Welcome to ClutchStats Dashboard</h4>
       <div class="player-dropdown">
-        <select id="player-select">
-          <option value="">Select a Player</option>
-          <option value="lebron">LeBron James</option>
-          <option value="curry">Stephen Curry</option>
-          <option value="giannis">Giannis Antetokounmpo</option>
-        </select>
-        <button class="view-button">View Stats</button>
+        <div class="player-select-container">
+
+          <select id="player-select">
+            <option value="">Select a Player</option>
+            <option value="lebron">LeBron James</option>
+            <option value="curry">Stephen Curry</option>
+            <option value="giannis">Giannis Antetokounmpo</option>
+          </select>
+        </div>
+        <div class="view-stats-button">
+          <button class="view-button">View Stats</button>
+        </div>
       </div>
       <div class="featured-player-container">
         <div class="featured-info">
@@ -63,6 +68,11 @@
           <img src="images/darius-knox.jpeg" alt="">
         </div>
       </div>
+
+
+
+
+
 
       <div id="myModal" class="modal">
         <div class="modal-content">

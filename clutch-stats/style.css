@@ -104,8 +104,20 @@ p {
 
 .player-dropdown {
     display: flex;
+    flex-direction: column;
+
     gap: 20px;
     padding: 100px;
+    justify-content: center;
+}
+
+.player-select-container {
+    display: flex;
+    justify-content: center;
+}
+
+.view-stats-button {
+    display: flex;
     justify-content: center;
 }
 
@@ -133,11 +145,17 @@ p {
 }
 
 .player-stats-container {
+
     display: flex;
     gap: 20px;
     align-items: flex-start;
 }
-
+.player-stats {
+    width: 50%;
+}
+.player-img {
+    width: 50%;
+}
 .player-modal-img {
     width: 100%;
     max-width: 200px;
