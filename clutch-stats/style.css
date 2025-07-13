@@ -103,6 +103,10 @@ p {
   background-color: #e0e0e0; /* Light gray, change as needed */
 }
 
+.welcome-message {
+  font-size: x-large;
+}
+
 .player-dropdown {
     display: flex;
     flex-direction: column;
@@ -123,7 +127,7 @@ p {
 }
 
 .modal {
-    display: none;
+    /* display: none; */
       position: fixed;
   z-index: 1;
   left: 0;
@@ -318,7 +322,7 @@ p {
   font-size: 1rem;
   border: 2px solid var(--primary-color);
   border-radius: 6px;
-  background-color: var(--accent2-color);
+  background-color: white;
   color: var(--primary-color);
   font-family: var(--paragraph-font);
   appearance: none;

@@ -1,6 +1,5 @@
 const players = [
   {
-    id: 1,
     name: 'Tariq Maddox',
     age: 26,
     team: 'Denver Stormhawks',
@@ -171,3 +170,4 @@ const players = [
     featuredReason: 'Averaging 27 points over the last 5 games and voted into the All-Star game.'
   }
 ];
+export default players;
