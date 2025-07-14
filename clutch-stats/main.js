@@ -1,5 +1,8 @@
 import players from './players.mjs';
 
+// const closeButton = document.querySelector()
+
+
 function randomNumber(list) {
     const randomNum = Math.floor(Math.random() * list.length);
     return randomNum;
@@ -16,7 +19,8 @@ function getRandomPlayer(list) {
 console.log(getRandomPlayer(players));
 
 function playerModalTemplate(player) {
-    return `<div class="modal-content">
+    return `<div id="myModal" class="modal">
+    <div class="modal-content">
           <span class="close-btn">&times;</span>
           <h1>ClutchStats Player Statistics</h2>
             <div class="player-stats-container">
@@ -29,11 +33,11 @@ function playerModalTemplate(player) {
                   <p class="team-name">${player.team}</p>
                   <h4>Season Stats</h4>
                   <div class="player-stats-grid">
-                    <div><strong>PPG:</strong>${player.stats.ppg}</div>
-                    <div><strong>APG:</strong>${player.stats.rpg}</div>
-                    <div><strong>RP:</strong>${player.stats.apg}</div>
-                    <div><strong>FG:</strong>${player.stats.bpg}%</div>
-                    <div><strong>3PT:</strong>${player.stats.spg}%</div>
+                    <div><strong>PPG: </strong>${player.stats.ppg}</div>
+                    <div><strong>APG: </strong>${player.stats.rpg}</div>
+                    <div><strong>RP: </strong>${player.stats.apg}</div>
+                    <div><strong>FG: </strong>${player.stats.fgPercent}%</div>
+                    <div><strong>3PT: </strong>${player.stats.threePtPercent}%</div>
                   </div>
                 </div>
               </div>
@@ -44,6 +48,7 @@ function playerModalTemplate(player) {
               <p>${player.bio}
 </p>
             </div>
+        </div>
         </div>`
 }
 
