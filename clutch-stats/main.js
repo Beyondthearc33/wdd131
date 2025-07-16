@@ -1,6 +1,56 @@
 import players from './players.mjs';
 
-// const closeButton = document.querySelector()
+const closeButton = document.querySelector(".close-btn");
+
+closeButton.addEventListener("click", closeModal);
+
+function closeModal() {
+      const modal = document.querySelector('.modal');
+  if (modal) {
+    modal.style.display = 'none';
+  }
+}
+
+function getSelectedPlayer() {
+    const playerSelected = document.querySelector(".player-select");
+    const playerValue = playerSelected.value;
+    return playerValue;
+}
+
+const viewStatsBtn = document.querySelector(".view-button");
+
+viewStatsBtn.addEventListener('click', viewStats);
+
+function viewStats() {
+    getSelectedPlayer;
+
+}
+
+
+function viewSelectedPlayer() {
+
+}
+
+function renderDropdown(player) {
+    const parent = document.querySelector(".player-select-container");
+    parent.innerHTML = playerDropdownTemplate(player);
+}
+
+function playerDropdownTemplate(player) {
+    return `
+          <select id="player-select">
+          <option value="">Select a Player</option>
+            ${playerList(player)}
+          </select>`;
+}
+
+function playerList(player) {
+    let html = '';
+    players.forEach(function(player) {
+    html += `<option value="${player.name}">${player.name}</option>`
+    })
+    return html;
+}
 
 
 function randomNumber(list) {
@@ -52,14 +102,13 @@ function playerModalTemplate(player) {
         </div>`
 }
 
-
-
 function renderPlayerModal(player) {
     const parent = document.querySelector(".modal-content");
     parent.innerHTML = playerModalTemplate(player);
 };
 
 function init() {
+    renderDropdown(players);
     const player = getRandomPlayer(players)
     renderPlayerModal(player);
 }
