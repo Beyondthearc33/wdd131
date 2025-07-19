@@ -5,10 +5,10 @@ const closeButton = document.querySelector(".close-btn");
 closeButton.addEventListener("click", closeModal);
 
 function closeModal() {
-      const modal = document.querySelector('.modal');
-  if (modal) {
-    modal.style.display = 'none';
-  }
+    const modal = document.querySelector('.modal');
+    if (modal) {
+        modal.style.display = 'none';
+    }
 }
 
 function getSelectedPlayer() {
@@ -22,8 +22,8 @@ const viewStatsBtn = document.querySelector(".view-button");
 viewStatsBtn.addEventListener('click', viewStats);
 
 function viewStats() {
-     const selectedName = getSelectedPlayer();
-    if (!selectedName) return; 
+    const selectedName = getSelectedPlayer();
+    if (!selectedName) return;
 
     const player = players.find(p => p.name === selectedName);
 
@@ -37,10 +37,10 @@ function viewStats() {
 
 
 function viewSelectedPlayer() {
- const selectedName = getSelectedPlayer();
-    if (!selectedName) return; 
+    const selectedName = getSelectedPlayer();
+    if (!selectedName) return;
 
-    
+
     const player = players.find(p => p.name === selectedName);
 
     if (player) {
@@ -65,8 +65,8 @@ function playerDropdownTemplate(player) {
 
 function playerList(player) {
     let html = '';
-    players.forEach(function(player) {
-    html += `<option value="${player.name}">${player.name}</option>`
+    players.forEach(function (player) {
+        html += `<option value="${player.name}">${player.name}</option>`
     })
     return html;
 }
@@ -126,7 +126,7 @@ function renderPlayerModal(player) {
 };
 
 function featuredPlayerTemplate(player) {
-     return `<div class="featured-info">
+    return `<div class="featured-info">
           <h1>Featured Player</h1>
           <h4 class="featured-player">${player.name}</h4>
           <p class="featured-reason">${player.featuredReason}</p>
@@ -150,18 +150,18 @@ const viewFeaturedStatsBtn = document.querySelector(".view-stats");
 viewFeaturedStatsBtn.addEventListener('click', viewPlayerStats);
 
 function viewPlayerStats() {
-  const featuredPlayerElement = document.querySelector('.featured-player');
-  const featuredPlayerName = featuredPlayerElement.textContent.trim(); // get the string
-  
-  const matchedPlayer = players.find(player => player.name === featuredPlayerName);
+    const featuredPlayerElement = document.querySelector('.featured-player');
+    const featuredPlayerName = featuredPlayerElement.textContent.trim();
 
-  if (matchedPlayer) {
+    const matchedPlayer = players.find(player => player.name === featuredPlayerName);
+
+    if (matchedPlayer) {
         const modal = document.querySelector('.modal');
         renderPlayerModal(matchedPlayer);
         modal.style.display = 'block';
-  } else {
-    console.log('Player not found');
-  }
+    } else {
+        console.log('Player not found');
+    }
 }
 
 
@@ -169,7 +169,6 @@ function init() {
     renderDropdown(players);
     const player = getRandomPlayer(players)
     renderFeaturedPlayer(player);
-    // viewPlayerStats(player);
-    // renderPlayerModal(player);
 }
+
 init();
